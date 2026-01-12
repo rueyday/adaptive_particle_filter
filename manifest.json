@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Tab",
+  "version": "1.0",
+  "description": "A clean new tab with greeting, time, and todo list",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}

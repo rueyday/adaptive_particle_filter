@@ -1,0 +1,114 @@
+:root {
+  --bg: #0b0f1a;
+  --panel: #11162a;
+  --panel-alt: #151b36;
+  --text: #e6e9f2;
+  --muted: #9aa4c7;
+  --blue: #4da3ff;
+  --blue-soft: rgba(77, 163, 255, 0.25);
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f1630, var(--bg));
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 380px;
+  padding: 28px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-alt));
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-soft);
+  box-shadow:
+    0 0 0 1px rgba(77, 163, 255, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* ---- Greeting ---- */
+#greeting {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Time ---- */
+#time {
+  font-size: 1.7rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ---- Todo ---- */
+.todo h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Input */
+#todo-input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-soft);
+  background: #0d1226;
+  color: var(--text);
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+#todo-input::placeholder {
+  color: #6f7bb3;
+}
+
+#todo-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(77, 163, 255, 0.2);
+}
+
+/* List */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* Items */
+#todo-list li {
+  padding: 9px 12px;
+  margin-bottom: 8px;
+  background: #0e1430;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border 0.2s,
+    transform 0.15s;
+}
+
+#todo-list li:hover {
+  border-color: var(--blue-soft);
+  transform: translateY(-1px);
+}
+
+/* Done state */
+#todo-list li.done {
+  text-decoration: line-through;
+  opacity: 0.45;
+}

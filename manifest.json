@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Hello Tab",
-  "version": "1.0",
-  "description": "A clean new tab with greeting, time, and todo list",
+  "version": "1.3",
+  "description": "New tab with greeting and weekly Google Calendar",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
+  },
+  "permissions": ["identity", "storage"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "762514410560-h4lfsh5f0l40i509lvfgo1muqti61gn8.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/calendar.readonly"]
   }
 }

@@ -23,11 +23,11 @@ function authenticate() {
 
 function fetchWeeklyEvents(token) {
   const start = new Date();
-  start.setDate(start.getDate() - 1);
+  start.setDate(start.getDate());
   start.setHours(0, 0, 0, 0);
 
   const end = new Date();
-  end.setDate(end.getDate() + 5);
+  end.setDate(end.getDate() + 10);
   end.setHours(23, 59, 59, 999);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/primary/events?timeMin=${start.toISOString()}&timeMax=${end.toISOString()}&singleEvents=true&orderBy=startTime`;
@@ -83,7 +83,7 @@ function renderWeeklyView(events) {
         : "All Day";
 
       const locationHtml = ev.location 
-        ? `<div class="event-location">📍 ${ev.location}</div>` 
+        ? `<div class="event-location">${ev.location}</div>` 
         : "";
 
       li.innerHTML = `

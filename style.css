@@ -1,6 +1,6 @@
 :root {
-  --bg: #0b0f1a;
-  --panel: #11162a;
+  --bg: #070a12;
+  --panel: #0c1122;
   --panel-alt: #151b36;
   --text: #e6e9f2;
   --muted: #9aa4c7;
@@ -17,7 +17,20 @@
 body {
   margin: 0;
   height: 100vh;
-  background: radial-gradient(circle at top, #0f1630, var(--bg));
+  width: 100vw;
+  background:
+    radial-gradient(
+      1500px circle at 50% 50%,
+      rgba(70, 110, 255, 0.12),
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.00) 30%
+    ),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   display: flex;
   align-items: center;
@@ -26,31 +39,28 @@ body {
 }
 
 .container {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
   text-align: center;
-  margin-top: -50px;
-}
-
-#greeting {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
+  z-index: 1;
 }
 
 #time {
-  font-size: 2rem;
-  color: var(--muted);
-  font-weight: 300;
+  font-size: 8rem;
+  color: var(--text);
+  font-weight: 700;
 }
 
 /* ---- Calendar Widget ---- */
 .calendar-widget {
   position: fixed;
-  bottom: 30px;
-  left: 30px;
-  width: 350px;
-  max-height: 60vh;
+  top: 10px;
+  bottom: 10px;
+  left: 15px;
+  width: 360px;
   overflow-y: auto;
-  padding: 20px;
+  padding: 15px;
   background: var(--panel);
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,0.1);
@@ -63,6 +73,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -10px;
   margin-bottom: 15px;
   font-weight: bold;
   color: var(--text);
@@ -89,7 +100,7 @@ body {
   font-weight: 700;
   color: var(--blue);
   text-transform: uppercase;
-  margin: 18px 0 8px 4px;
+  margin: 0 0 8px 4px;
   letter-spacing: 1px;
 }
 

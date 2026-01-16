@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Hello Tab",
+  "name": "Axiom Tab",
   "version": "1.3",
-  "description": "New tab with greeting and weekly Google Calendar",
+  "description": "Tab with useful features and a clean design.",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },

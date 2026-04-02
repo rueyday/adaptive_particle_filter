@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
   <div class="container">
     <div id="time"></div>
+    <div class="shortcuts-section">
+      <div id="shortcuts-grid"></div>
+      <button id="shortcuts-edit-btn" title="Edit shortcuts">✎</button>
+    </div>
   </div>
 
   <div class="calendar-widget" id="calendar-widget">
@@ -17,7 +22,21 @@
     <ul id="calendar-events"></ul>
   </div>
 
+  <div class="right-panel" id="right-panel">
+    <div class="todo-widget">
+      <div class="widget-title">Tasks</div>
+      <div class="todo-input-row">
+        <input type="text" id="todo-input" placeholder="Add a task..." />
+        <button id="todo-add-btn">+</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+  </div>
+
+  <script src="background.js"></script>
   <script src="script.js"></script>
   <script src="calendar.js"></script>
+  <script src="todo.js"></script>
+  <script src="shortcuts.js"></script>
 </body>
 </html>

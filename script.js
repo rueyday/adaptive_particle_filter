@@ -1,7 +1,5 @@
 function updateTime() {
   const now = new Date();
-  
-  // Update Time
   const timeString = now.toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',

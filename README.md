@@ -6,7 +6,7 @@ A productivity-focused techno Chrome new tab extension for busy engineers
 ## Features
 
 - **Live Clock** — updates every second, displayed front and center
-- **Customizable Shortcuts** — click the edit button to add, rename, or remove site shortcuts; saved locally per browser
+- **Customizable Shortcuts** — click the edit button to edit or remove site shortcuts; saved locally
 - **Google Calendar Widget** — connect your Google account to see upcoming events
 - **Task List** — add tasks, check them off, and they auto-dismiss 10 minutes after completion
 

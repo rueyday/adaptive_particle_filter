@@ -4,8 +4,6 @@
 
 ![Axiom Tab Demo](demo.gif)
 
----
-
 ## Features
 
 ### Live Clock

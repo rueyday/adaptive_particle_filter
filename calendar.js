@@ -15,7 +15,12 @@ function initCalendar() {
 
 function authenticate() {
   chrome.identity.getAuthToken({ interactive: true }, (token) => {
-    if (chrome.runtime.lastError || !token) return;
+    if (chrome.runtime.lastError) {
+      console.error("Calendar auth error:", chrome.runtime.lastError.message);
+      connectBtn.textContent = "Auth failed — check console";
+      return;
+    }
+    if (!token) return;
     connectBtn.style.display = "none";
     fetchWeeklyEvents(token);
   });

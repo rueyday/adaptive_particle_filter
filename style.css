@@ -117,10 +117,27 @@ body {
   font-size: 0.8rem;
 }
 
+#connect-btn:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+#connect-btn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
 #calendar-events {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.calendar-empty {
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 8px 4px;
 }
 
 .day-header {
@@ -182,6 +199,14 @@ body {
   color: var(--muted);
   margin-top: 6px;
   font-style: italic;
+}
+
+.event-calendar {
+  font-size: 0.68rem;
+  color: var(--blue);
+  letter-spacing: 0.4px;
+  margin-top: 7px;
+  text-transform: uppercase;
 }
 
 .right-panel {
